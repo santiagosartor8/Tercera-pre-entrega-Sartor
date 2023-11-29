@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Listado de Editoriales{% endblock %}
+
+{% block content %}
+    <header>
+        <h1>Listado de Editoriales</h1>
+    </header>
+
+    <ul>
+        {% for editorial in editoriales %}
+            <li>{{ editorial.nombre }} - {{ editorial.direccion }} - {{ editorial.pais }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'crear_editorial' %}">Crear nueva editorial</a>
+{% endblock %}

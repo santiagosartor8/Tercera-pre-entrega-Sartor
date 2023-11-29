@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Listado de Autores{% endblock %}
+
+{% block content %}
+    <header>
+        <h1>Listado de Autores</h1>
+    </header>
+
+    <ul>
+        {% for autor in autores %}
+            <li>{{ autor.nombre }} {{ autor.apellido }} - {{ autor.fecha_nacimiento }} - {{ autor.nacionalidad }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'crear_autor' %}">Crear nuevo autor</a>
+{% endblock %}

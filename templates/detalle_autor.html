@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Detalles del Autor{% endblock %}
+
+{% block content %}
+   <h1>Detalles del Autor</h1>
+   <p>Nombre: {{ autor.nombre }}</p>
+   <p>Apellido: {{ autor.apellido }}</p>
+
+   <a href="{% url 'listar_autores' %}">Volver a la lista de autores</a>
+
+    <a href="{% url 'crear_resena' %}">Crear nueva reseña</a>
+{% endblock %}
